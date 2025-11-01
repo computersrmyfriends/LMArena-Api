@@ -192,6 +192,34 @@ def test_server_endpoints():
     except Exception as e:
         add_test_result("Error Logs Endpoint", False, str(e))
     
+    # Test 11: Chat Completions (without browser - expect 503)
+    print("\n⚠️  Testing Chat Completions API behavior without browser connection...")
+    try:
+        payload = {
+            "model": "claude-3-5-sonnet-20241022",
+            "messages": [{"role": "user", "content": "Test"}],
+            "stream": False
+        }
+        response = requests.post(f"{base_url}/v1/chat/completions", json=payload, timeout=5)
+        
+        # Expected: 503 Service Unavailable (browser not connected)
+        if response.status_code == 503:
+            error_data = response.json()
+            passed = "Browser" in error_data.get("detail", "")
+            add_test_result(
+                "Chat Completions (Browser Required)",
+                passed,
+                f"Correctly returns 503 when browser not connected: {error_data.get('detail', 'N/A')}"
+            )
+        else:
+            add_test_result(
+                "Chat Completions (Browser Required)",
+                False,
+                f"Unexpected status {response.status_code}, expected 503"
+            )
+    except Exception as e:
+        add_test_result("Chat Completions (Browser Required)", False, str(e))
+    
     return results
 
 def main():
@@ -224,6 +252,11 @@ def main():
         # Exit with appropriate code
         if results['failed'] == 0:
             print("\n✓ All tests passed! Server is working correctly.")
+            print("\n📝 Note: Tests verify server functionality without browser connection.")
+            print("   To send actual queries to LM Arena models, you need:")
+            print("   1. Browser with LM Arena website and userscript/extension")
+            print("   2. Browser connects to server via WebSocket")
+            print("   3. Then API requests are proxied to actual LM Arena models")
             return 0
         else:
             print(f"\n✗ {results['failed']} test(s) failed.")

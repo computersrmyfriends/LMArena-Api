@@ -10,7 +10,9 @@ The LMArena API Proxy Server has been successfully tested and validated. All cor
 
 ## Test Results
 
-### ✅ All Tests Passed (10/10 - 100%)
+### ✅ All Tests Passed (11/11 - 100%)
+
+**Server Infrastructure Tests:**
 
 1. **Health Check Endpoint** ✓
    - Status: healthy
@@ -52,6 +54,29 @@ The LMArena API Proxy Server has been successfully tested and validated. All cor
 10. **Error Logs Endpoint** ✓
     - Error logs available: 0 entries
     - Error tracking functional
+
+11. **Chat Completions API** ✓
+    - Correctly returns 503 when browser not connected
+    - Proper error handling verified
+
+## What Was Tested
+
+These tests validate the **server infrastructure** is working correctly:
+- ✅ All REST API endpoints respond properly
+- ✅ Model registry loads successfully (89 models)
+- ✅ Monitoring and logging systems operational
+- ✅ WebSocket infrastructure ready for browser connection
+- ✅ Proper error handling when browser not connected
+
+## What Requires Manual Testing
+
+**Actual LM Arena model queries require browser connection:**
+- ⚠️ Real model responses (Claude, GPT, Gemini, etc.)
+- ⚠️ Streaming responses from models
+- ⚠️ Image generation (DALL-E, Flux, etc.)
+- ⚠️ WebSocket communication with browser
+
+See `TESTING_NOTES.md` for detailed architecture explanation and manual testing guide.
 
 ## Dependencies Installed
 
