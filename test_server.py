@@ -3,10 +3,8 @@
 Test script for LMArena API Proxy Server
 Tests the server's basic functionality without requiring browser connection
 """
-import asyncio
 import json
 import time
-import signal
 import sys
 from pathlib import Path
 
@@ -17,7 +15,6 @@ sys.path.insert(0, str(Path(__file__).parent / "server"))
 import uvicorn
 from multiprocessing import Process
 import requests
-from threading import Timer
 
 def start_server():
     """Start the proxy server in a separate process"""
@@ -218,7 +215,10 @@ def main():
         print(f"Total Tests: {results['total_tests']}")
         print(f"Passed: {results['passed']} ✓")
         print(f"Failed: {results['failed']} ✗")
-        print(f"Success Rate: {(results['passed']/results['total_tests']*100):.1f}%")
+        if results['total_tests'] > 0:
+            print(f"Success Rate: {(results['passed']/results['total_tests']*100):.1f}%")
+        else:
+            print("Success Rate: N/A (no tests run)")
         print("=" * 60)
         
         # Exit with appropriate code
