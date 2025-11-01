@@ -1,0 +1,104 @@
+08:17:14.596 - INFO - [lifespan:1170] - Server is starting...
+08:17:14.596 - INFO - [lifespan:1175] - 🌐 Server access URLs:
+08:17:14.596 - INFO - [lifespan:1176] -   - Local: http://localhost:9080
+08:17:14.596 - INFO - [lifespan:1177] -   - Network: http://10.1.0.126:9080
+08:17:14.596 - INFO - [lifespan:1178] - 📱 Use the Network URL to access from your phone on the same WiFi
+08:17:14.596 - INFO - [lifespan:1181] - 
+📋 Available Endpoints:
+08:17:14.596 - INFO - [lifespan:1182] -   🖥️  Monitor Dashboard: http://10.1.0.126:9080/monitor
+08:17:14.596 - INFO - [lifespan:1183] -      Real-time monitoring dashboard for system status, request logs, and performance metrics
+08:17:14.596 - INFO - [lifespan:1185] - 
+  📊 Metrics & Health:
+08:17:14.596 - INFO - [lifespan:1186] -      - Prometheus Metrics: http://10.1.0.126:9080/metrics
+08:17:14.596 - INFO - [lifespan:1187] -        Prometheus format performance metrics, can be integrated with Grafana
+08:17:14.597 - INFO - [lifespan:1188] -      - Health Check: http://10.1.0.126:9080/health
+08:17:14.597 - INFO - [lifespan:1189] -        Basic health check
+08:17:14.597 - INFO - [lifespan:1190] -      - Detailed Health: http://10.1.0.126:9080/api/health/detailed
+08:17:14.597 - INFO - [lifespan:1191] -        Detailed health status with score and suggestions
+08:17:14.597 - INFO - [lifespan:1193] - 
+  🤖 AI API:
+08:17:14.597 - INFO - [lifespan:1194] -      - Chat Completions: POST http://10.1.0.126:9080/v1/chat/completions
+08:17:14.597 - INFO - [lifespan:1195] -        OpenAI-compatible chat API
+08:17:14.597 - INFO - [lifespan:1196] -      - List Models: GET http://10.1.0.126:9080/v1/models
+08:17:14.597 - INFO - [lifespan:1197] -        Get available model list
+08:17:14.597 - INFO - [lifespan:1198] -      - Refresh Models: POST http://10.1.0.126:9080/v1/refresh-models
+08:17:14.597 - INFO - [lifespan:1199] -        Refresh model list
+08:17:14.597 - INFO - [lifespan:1201] - 
+  📈 Statistics:
+08:17:14.597 - INFO - [lifespan:1202] -      - Stats Summary: http://10.1.0.126:9080/api/stats/summary
+08:17:14.597 - INFO - [lifespan:1203] -        24-hour statistics summary
+08:17:14.597 - INFO - [lifespan:1204] -      - Request Logs: http://10.1.0.126:9080/api/logs/requests
+08:17:14.598 - INFO - [lifespan:1205] -        Request logs API
+08:17:14.598 - INFO - [lifespan:1206] -      - Error Logs: http://10.1.0.126:9080/api/logs/errors
+08:17:14.598 - INFO - [lifespan:1207] -        Error logs API
+08:17:14.598 - INFO - [lifespan:1208] -      - Alerts: http://10.1.0.126:9080/api/alerts
+08:17:14.598 - INFO - [lifespan:1209] -        System alert history
+08:17:14.598 - INFO - [lifespan:1211] - 
+  🛠️  OpenAI Client Config:
+08:17:14.598 - INFO - [lifespan:1212] -      base_url='http://10.1.0.126:9080/v1'
+08:17:14.598 - INFO - [lifespan:1213] -      api_key='sk-any-string-you-like'
+08:17:14.598 - INFO - [lifespan:1214] - 
+============================================================
+
+08:17:14.598 - INFO - [lifespan:1219] - Loaded 89 fallback models
+08:17:14.598 - INFO - [lifespan:1228] - Server startup complete
+08:17:14.598 - INFO - [periodic_cleanup:701] - Cleanup task completed. Active requests: 0
+08:17:15.301 - INFO - [lifespan:1235] - Lifespan: Server is shutting down. Cancelling 2 background tasks...
+08:17:15.301 - INFO - [lifespan:1241] - Lifespan: Cancelling task: <Task pending name='Task-3' coro=<periodic_cleanup() running at /home/runner/work/LMArena-Api/LMArena-Api/server/proxy_server.py:706> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+08:17:15.301 - INFO - [lifespan:1241] - Lifespan: Cancelling task: <Task pending name='Task-4' coro=<MonitoringAlerts.check_system_health() running at /home/runner/work/LMArena-Api/LMArena-Api/server/proxy_server.py:571> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+08:17:15.302 - INFO - [lifespan:1247] - Lifespan: Waiting for 2 cancelled tasks to finish...
+08:17:15.302 - INFO - [lifespan:1253] - Lifespan: Task 0 finished normally
+08:17:15.302 - INFO - [lifespan:1253] - Lifespan: Task 1 finished normally
+08:17:15.302 - INFO - [lifespan:1255] - Lifespan: All background tasks cancelled. Shutdown complete.
+08:17:41.215 - INFO - [lifespan:1170] - Server is starting...
+08:17:41.215 - INFO - [lifespan:1175] - 🌐 Server access URLs:
+08:17:41.215 - INFO - [lifespan:1176] -   - Local: http://localhost:9080
+08:17:41.215 - INFO - [lifespan:1177] -   - Network: http://10.1.0.126:9080
+08:17:41.215 - INFO - [lifespan:1178] - 📱 Use the Network URL to access from your phone on the same WiFi
+08:17:41.215 - INFO - [lifespan:1181] - 
+📋 Available Endpoints:
+08:17:41.215 - INFO - [lifespan:1182] -   🖥️  Monitor Dashboard: http://10.1.0.126:9080/monitor
+08:17:41.216 - INFO - [lifespan:1183] -      Real-time monitoring dashboard for system status, request logs, and performance metrics
+08:17:41.216 - INFO - [lifespan:1185] - 
+  📊 Metrics & Health:
+08:17:41.216 - INFO - [lifespan:1186] -      - Prometheus Metrics: http://10.1.0.126:9080/metrics
+08:17:41.216 - INFO - [lifespan:1187] -        Prometheus format performance metrics, can be integrated with Grafana
+08:17:41.216 - INFO - [lifespan:1188] -      - Health Check: http://10.1.0.126:9080/health
+08:17:41.216 - INFO - [lifespan:1189] -        Basic health check
+08:17:41.216 - INFO - [lifespan:1190] -      - Detailed Health: http://10.1.0.126:9080/api/health/detailed
+08:17:41.216 - INFO - [lifespan:1191] -        Detailed health status with score and suggestions
+08:17:41.216 - INFO - [lifespan:1193] - 
+  🤖 AI API:
+08:17:41.216 - INFO - [lifespan:1194] -      - Chat Completions: POST http://10.1.0.126:9080/v1/chat/completions
+08:17:41.216 - INFO - [lifespan:1195] -        OpenAI-compatible chat API
+08:17:41.216 - INFO - [lifespan:1196] -      - List Models: GET http://10.1.0.126:9080/v1/models
+08:17:41.216 - INFO - [lifespan:1197] -        Get available model list
+08:17:41.216 - INFO - [lifespan:1198] -      - Refresh Models: POST http://10.1.0.126:9080/v1/refresh-models
+08:17:41.216 - INFO - [lifespan:1199] -        Refresh model list
+08:17:41.216 - INFO - [lifespan:1201] - 
+  📈 Statistics:
+08:17:41.216 - INFO - [lifespan:1202] -      - Stats Summary: http://10.1.0.126:9080/api/stats/summary
+08:17:41.216 - INFO - [lifespan:1203] -        24-hour statistics summary
+08:17:41.216 - INFO - [lifespan:1204] -      - Request Logs: http://10.1.0.126:9080/api/logs/requests
+08:17:41.216 - INFO - [lifespan:1205] -        Request logs API
+08:17:41.216 - INFO - [lifespan:1206] -      - Error Logs: http://10.1.0.126:9080/api/logs/errors
+08:17:41.216 - INFO - [lifespan:1207] -        Error logs API
+08:17:41.216 - INFO - [lifespan:1208] -      - Alerts: http://10.1.0.126:9080/api/alerts
+08:17:41.216 - INFO - [lifespan:1209] -        System alert history
+08:17:41.216 - INFO - [lifespan:1211] - 
+  🛠️  OpenAI Client Config:
+08:17:41.216 - INFO - [lifespan:1212] -      base_url='http://10.1.0.126:9080/v1'
+08:17:41.216 - INFO - [lifespan:1213] -      api_key='sk-any-string-you-like'
+08:17:41.216 - INFO - [lifespan:1214] - 
+============================================================
+
+08:17:41.216 - INFO - [lifespan:1219] - Loaded 89 fallback models
+08:17:41.216 - INFO - [lifespan:1228] - Server startup complete
+08:17:41.217 - INFO - [periodic_cleanup:701] - Cleanup task completed. Active requests: 0
+08:17:42.018 - INFO - [lifespan:1235] - Lifespan: Server is shutting down. Cancelling 2 background tasks...
+08:17:42.019 - INFO - [lifespan:1241] - Lifespan: Cancelling task: <Task pending name='Task-3' coro=<periodic_cleanup() running at /home/runner/work/LMArena-Api/LMArena-Api/server/proxy_server.py:706> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+08:17:42.019 - INFO - [lifespan:1241] - Lifespan: Cancelling task: <Task pending name='Task-4' coro=<MonitoringAlerts.check_system_health() running at /home/runner/work/LMArena-Api/LMArena-Api/server/proxy_server.py:571> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+08:17:42.019 - INFO - [lifespan:1247] - Lifespan: Waiting for 2 cancelled tasks to finish...
+08:17:42.019 - INFO - [lifespan:1253] - Lifespan: Task 0 finished normally
+08:17:42.019 - INFO - [lifespan:1253] - Lifespan: Task 1 finished normally
+08:17:42.019 - INFO - [lifespan:1255] - Lifespan: All background tasks cancelled. Shutdown complete.
