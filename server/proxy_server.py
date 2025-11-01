@@ -2394,7 +2394,10 @@ def get_health_recommendations(issues):
 @app.get("/monitor", response_class=HTMLResponse)
 async def monitor_dashboard():
     """Monitor dashboard"""
-    with open("templates\monitor.html", "r", encoding="utf-8") as f:
+    # Get the parent directory (where templates folder is)
+    script_dir = Path(__file__).parent.parent
+    template_path = script_dir / "templates" / "monitor.html"
+    with open(template_path, "r", encoding="utf-8") as f:
         html = f.read()
     return HTMLResponse(content=html)
 
